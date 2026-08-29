@@ -1,0 +1,146 @@
+.CalendarDropdown {
+  position: absolute;
+  background-color: $color-bg-light;
+  box-shadow: $shadow-xl;
+  right: -60px; 
+  top: 52px;
+  border-radius: $radius-lg;
+  width: 320px;
+  z-index: 100;
+  border: 1px solid $color-border;
+  display: flex;
+  flex-direction: column;
+  
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+
+  &.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .header {
+    padding: $space-md;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid $color-border-light;
+    background-color: $color-bg-hover;
+
+    .title {
+      h6 {
+        margin: 0;
+        font-size: $text-size-md;
+        font-weight: 600;
+        color: $color-text-primary;
+        margin-bottom: 2px;
+      }
+      small {
+        font-size: $text-size-xs;
+        color: $color-primary;
+        font-weight: 500;
+      }
+    }
+
+    .addBtn {
+      background-color: rgba(#0ba8b5, 0.1); // Fallback color mix
+      color: $color-primary;
+      border: none;
+      width: 32px;
+      height: 32px;
+      border-radius: $radius-full;
+      @include flexCenter;
+      cursor: pointer;
+      transition: $transition-fast;
+
+      &:hover {
+        background-color: $color-primary;
+        color: $color-text-white;
+      }
+    }
+  }
+
+  .eventsList {
+    max-height: 300px;
+    overflow-y: auto;
+    padding: $space-sm;
+    display: flex;
+    flex-direction: column;
+    gap: $space-xs;
+  }
+
+  .eventItem {
+    display: flex;
+    gap: $space-md;
+    padding: $space-sm;
+    border-radius: $radius-md;
+    border-left: 3px solid transparent;
+    transition: $transition-fast;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $color-bg-hover;
+      border-left-color: $color-primary;
+    }
+
+    .timeBox {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      min-width: 50px;
+      color: $color-text-tertiary;
+
+      span {
+        font-size: 11px;
+        font-weight: 600;
+      }
+    }
+
+    .details {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 4px;
+
+      h5 {
+        margin: 0;
+        font-size: $text-size-sm;
+        font-weight: 600;
+        color: $color-text-primary;
+      }
+      
+      p {
+        margin: 0;
+        font-size: $text-size-xs;
+        color: $color-text-secondary;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+      }
+    }
+  }
+
+  .footer {
+    padding: $space-md;
+    text-align: center;
+    border-top: 1px solid $color-border;
+    background-color: $color-bg-light;
+
+    a {
+      font-size: $text-size-sm;
+      font-weight: 500;
+      color: $color-primary;
+      text-decoration: none;
+      transition: $transition-fast;
+
+      &:hover {
+        color: $color-primary-hover;
+      }
+    }
+  }
+}

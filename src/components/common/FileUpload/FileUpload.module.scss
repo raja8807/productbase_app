@@ -1,0 +1,79 @@
+.fileUpload {
+  width: 100%;
+
+  .dropZone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    min-height: 180px;
+    padding: 28px;
+    border: 2px dashed $color-border-dark;
+    border-radius: 12px;
+    background: $color-accent;
+    cursor: pointer;
+    transition:
+      border-color 0.2s ease,
+      background 0.2s ease,
+      transform 0.2s ease;
+
+    &:hover {
+      border-color: $color-primary;
+      background: $color-bg-hover;
+    }
+
+    &.dragging {
+      border-color: $color-primary;
+      background: $color-accent;
+
+      transform: scale(1.01);
+    }
+
+    .icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      flex-shrink: 0;
+      border-radius: 12px;
+      background: $color-primary;
+      color: #fff;
+      font-size: 24px;
+      font-weight: 500;
+    }
+
+    .content {
+      .title {
+        margin: 0 0 5px;
+        color: $color-text-primary;
+        font-size: 15px;
+        font-weight: 600;
+      }
+
+      .description {
+        margin: 0;
+        color: $color-text-disabled;
+        font-size: 13px;
+
+        span {
+          color: $color-primary;
+          font-weight: 500;
+        }
+      }
+
+      .supported {
+        margin: 10px 0 0;
+        color: $color-text-disabled;
+        font-size: 11px;
+      }
+    }
+  }
+
+  .error {
+    margin: 8px 2px 0;
+    color: #dc4444;
+    font-size: 12px;
+    text-align: center;
+  }
+}

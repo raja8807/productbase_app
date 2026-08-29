@@ -1,0 +1,200 @@
+/*=========================================
+=            Primary Colors               =
+=========================================*/
+
+$color-primary: #2551fc;
+$color-primary-hover: #1642f2;
+$color-primary-hover-light: #f8feff;
+$color-primary-light: #0894a1b5;
+$color-primary-dark: #066972;
+
+$color-secondary: #0f2c66;
+$color-secondary-hover: #12397e;
+$color-accent: #fdfbf9;
+
+$gradient-hero: linear-gradient(135deg, $color-primary, $color-secondary);
+
+/*=========================================
+=            Background Colors            =
+=========================================*/
+
+$color-bg-page: #f1f1f1;
+$color-bg-light: #ffffff;
+$color-bg-secondary: #f4f0fe;
+$color-bg-hover: #f9fafb;
+$color-bg-disabled: #f1f5f9;
+$color-bg-overlay: rgba(15, 23, 42, 0.5);
+
+/*=========================================
+=          Secondary Colors               =
+=========================================*/
+
+$color-secondary-light: #eef2ff;
+$color-secondary-light-hover: #e6ecff;
+
+/*=========================================
+=            Success Colors               =
+=========================================*/
+
+$color-success: #16a34a;
+$color-success-light: #dcfce7;
+$color-success-dark: #15803d;
+
+/*=========================================
+=            Warning Colors               =
+=========================================*/
+
+$color-warning: #f59e0b;
+$color-warning-light: #fef3c7;
+$color-warning-dark: #d97706;
+
+/*=========================================
+=             Danger Colors               =
+=========================================*/
+
+$color-danger: #dc2626;
+$color-danger-light: #fee2e2;
+$color-danger-dark: #b91c1c;
+
+$color-error: #dc2626;
+
+/*=========================================
+=             Info Colors                 =
+=========================================*/
+
+$color-info: #0ea5e9;
+$color-info-light: #e0f2fe;
+$color-info-dark: #0284c7;
+
+/*=========================================
+=            Text Colors                  =
+=========================================*/
+
+$color-text-primary: #0b192e;
+$color-text-secondary: #4b5563;
+$color-text-tertiary: #9ca3af;
+$color-text-muted: #6b7280;
+$color-text-light: #9ca3af;
+$color-text-white: #ffffff;
+$color-text-disabled: #747b8b;
+
+/*=========================================
+=            Border Colors                =
+=========================================*/
+
+$color-border: #e5e7eb;
+$color-border-light: #f1f5f9;
+$color-border-dark: #d1d5db;
+
+/*=========================================
+=            Sidebar Colors               =
+=========================================*/
+
+$color-sidebar-bg: #ebebeb;
+$color-sidebar-hover: #f3f4f6;
+$color-sidebar-active: #e8f0fe;
+$color-sidebar-border: #e5e7eb;
+
+/*=========================================
+=            Header Colors                =
+=========================================*/
+
+$color-header-bg: #ffffff;
+$color-header-border: #e5e7eb;
+
+/*=========================================
+=              Card Colors                =
+=========================================*/
+
+$color-card-bg: #ffffff;
+$color-card-hover: #fafafa;
+$color-card-border: #e5e7eb;
+
+/*=========================================
+=             Table Colors                =
+=========================================*/
+
+$color-table-header: #f9fafb;
+$color-table-row-hover: #f8fafc;
+$color-table-row-selected: #eff6ff;
+$color-table-border: #e5e7eb;
+
+/*=========================================
+=            Input Colors                 =
+=========================================*/
+
+$color-input-bg: #ffffff;
+$color-input-border: #d1d5db;
+$color-input-focus: #2563eb;
+$color-input-placeholder: #9ca3af;
+$color-input-disabled: #f3f4f6;
+
+/*=========================================
+=            Shadow Colors                =
+=========================================*/
+
+$shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.05);
+$shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.06);
+$shadow-md: 0 4px 8px rgba(0, 0, 0, 0.08);
+$shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.1);
+$shadow-xl: 0 12px 32px rgba(0, 0, 0, 0.12);
+
+/*=========================================
+=            Status Colors                =
+=========================================*/
+
+$status-active: #16a34a;
+$status-inactive: #6b7280;
+$status-pending: #f59e0b;
+$status-completed: #22c55e;
+$status-cancelled: #dc2626;
+$status-draft: #64748b;
+$status-overdue: #ef4444;
+$status-progress: #2563eb;
+//-----------------------------------------------------------------------------------
+
+// Spacing System
+$space-xs: 0.25rem;
+$space-sm: 0.5rem;
+$space-md: 1rem;
+$space-lg: 1.5rem;
+$space-xl: 2rem;
+$space-xxl: 4rem;
+$space-xxxl: 8rem;
+
+// Typography (Sizes)
+$text-size-xs: 0.75rem;
+$text-size-sm: 0.875rem;
+$text-size-base: 1rem;
+$text-size-md: 1.1rem;
+$text-size-lg: 1.125rem;
+$text-size-xl: 1.25rem;
+$text-size-2xl: 1.5rem;
+$text-size-3xl: 1.875rem;
+$text-size-4xl: 2.25rem;
+$text-size-5xl: 3rem;
+$text-size-6xl: 4rem;
+
+// Border Radius
+$radius-sm: 0.25rem;
+$radius-md: 0.5rem;
+$radius-lg: 0.938rem;
+$radius-xl: 1.25rem;
+$radius-full: 9999px;
+
+// Shadows
+$shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+$shadow-md:
+  0 4px 6px -1px rgba(0, 0, 0, 0.1),
+  0 2px 4px -1px rgba(0, 0, 0, 0.06);
+$shadow-lg:
+  0 10px 15px -3px rgba(0, 0, 0, 0.1),
+  0 4px 6px -2px rgba(0, 0, 0, 0.05);
+$shadow-xl:
+  0 20px 25px -5px rgba(0, 0, 0, 0.1),
+  0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+// Transitions
+$transition-fast: 150ms ease-in-out;
+$transition-default: 300ms ease-in-out;
+$transition-slow: 500ms ease-in-out;

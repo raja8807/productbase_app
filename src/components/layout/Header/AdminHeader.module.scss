@@ -1,0 +1,46 @@
+.AdminHeader {
+  // height: 70px;
+  border-bottom: 1px solid $color-border-dark;
+  padding: 0px 20px;
+  height: 72px;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+
+    .left {
+      display: flex;
+      gap: 12px;
+      h3 {
+        font-size: 17px;
+        font-weight: 600;
+
+        span {
+          text-transform: uppercase;
+
+          .chev {
+            width: 14px;
+            margin: 0 4px;
+            margin-top: -2px;
+          }
+        }
+      }
+
+      svg {
+        cursor: pointer;
+
+        &:hover {
+          color: $color-secondary;
+        }
+      }
+      // color: $color-text-primary;
+    }
+
+    .right {
+      height: 100%;
+      display: flex;
+    }
+  }
+}

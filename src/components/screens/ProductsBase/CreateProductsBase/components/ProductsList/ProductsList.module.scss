@@ -1,0 +1,88 @@
+.bottom {
+  display: grid;
+  grid-template-columns: 1fr 0.2fr;
+  align-items: center;
+  gap: 20px;
+
+  button {
+    height: 100%;
+  }
+
+  .selectedFile {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 6px;
+    border: 1px solid #e3e5eb;
+    border-radius: 12px;
+    background: #fff;
+
+    .fileIcon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      flex-shrink: 0;
+      border-radius: 8px;
+      background: #e8f7ee;
+      color: #168447;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .fileInfo {
+      flex: 1;
+      min-width: 0;
+
+      .fileName {
+        margin: 0 0 4px;
+        overflow: hidden;
+        color: #172033;
+        font-size: 14px;
+        font-weight: 500;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .fileSize {
+        margin: 0;
+        color: #8b94a7;
+        font-size: 11px;
+      }
+    }
+
+    .remove {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 30px;
+      border: 0;
+      border-radius: 7px;
+      background: transparent;
+      color: #8b94a7;
+      font-size: 20px;
+      cursor: pointer;
+
+      &:hover {
+        background: #fef1f1;
+        color: #dc4444;
+      }
+    }
+  }
+
+  @include respond-below(md) {
+    display: unset;
+
+    .selectedFile {
+      display: none;
+    }
+
+    button {
+      height: 50px;
+    }
+
+    // flex-direction: column;
+  }
+}

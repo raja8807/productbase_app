@@ -1,0 +1,157 @@
+.NotificationsListBox {
+  position: absolute;
+  background-color: $color-bg-light;
+  box-shadow: $shadow-xl;
+  right: 0;
+  top: calc(100% + $space-sm);
+  border-radius: $radius-md;
+  width: 320px;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid $color-border;
+  animation: slideDown 0.2s ease-out forwards;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.header {
+  padding: $space-md;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid $color-border;
+  background-color: $color-bg-hover;
+
+  h6 {
+    margin: 0;
+    font-size: $text-size-md;
+    font-weight: 600;
+    color: $color-text-primary;
+  }
+}
+
+.markReadBtn {
+  background: none;
+  border: none;
+  font-size: $text-size-xs;
+  color: $color-text-muted;
+  @include flexCenter;
+  gap: 4px;
+  cursor: pointer;
+  padding: 0;
+  transition: $transition-fast;
+
+  &:hover {
+    color: $color-primary;
+  }
+}
+
+.list {
+  max-height: 350px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  display: flex;
+  gap: $space-sm;
+  padding: $space-md;
+  border-bottom: 1px solid $color-border-light;
+  transition: $transition-fast;
+  cursor: pointer;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  &:hover {
+    background-color: $color-bg-hover;
+  }
+
+  &.unread {
+    background-color: $color-secondary-light;
+    
+    &:hover {
+      background-color: $color-secondary-light-hover;
+    }
+  }
+}
+
+.iconBox {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  @include flexCenter;
+  flex-shrink: 0;
+
+  &.success {
+    background-color: $color-success-light;
+    color: $color-success;
+  }
+
+  &.warning {
+    background-color: $color-warning-light;
+    color: $color-warning;
+  }
+
+  &.info {
+    background-color: $color-info-light;
+    color: $color-info;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.title {
+  font-size: $text-size-sm;
+  font-weight: 600;
+  color: $color-text-primary;
+}
+
+.desc {
+  font-size: $text-size-xs;
+  color: $color-text-secondary;
+  line-height: 1.4;
+}
+
+.time {
+  font-size: $text-size-xs;
+  color: $color-text-tertiary;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 4px;
+}
+
+.footer {
+  padding: $space-md;
+  text-align: center;
+  font-size: $text-size-sm;
+  font-weight: 500;
+  color: $color-primary;
+  cursor: pointer;
+  border-top: 1px solid $color-border;
+  background-color: $color-bg-light;
+  transition: $transition-fast;
+
+  &:hover {
+    color: $color-primary-hover;
+    background-color: $color-primary-hover-light;
+  }
+}

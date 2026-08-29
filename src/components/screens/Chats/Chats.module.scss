@@ -1,0 +1,11 @@
+.ChatsScreen {
+  display: grid;
+  grid-template-columns: 0.35fr 1fr;
+  gap: 26px;
+  //   background-color: red;
+  height: 100%;
+
+  @include respond-below(md) {
+    grid-template-columns: 1fr;
+  }
+}

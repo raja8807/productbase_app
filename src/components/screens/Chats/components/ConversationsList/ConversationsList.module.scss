@@ -1,0 +1,47 @@
+.Conversations {
+  //   background-color: red;
+  height: 100%;
+  overflow: hidden;
+  height: 100%;
+  .conversationsList {
+    .convoItem {
+      //   background: red;
+      //   margin-bottom: 20px;
+      padding: 10px;
+
+      &:last-child {
+        // background-color: red;
+        margin-bottom: 100px;
+      }
+
+      cursor: pointer;
+      border-radius: 10px;
+      &:hover {
+        background-color: $color-accent;
+      }
+
+      p {
+        font-size: 15px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+
+      small {
+        font-size: 10px;
+        color: $color-text-disabled;
+        // text-align: right;
+        display: block;
+        margin-top: 6px;
+      }
+
+      &.active {
+        background-color: $color-bg-secondary;
+        p {
+          color: $color-primary;
+        }
+      }
+    }
+  }
+}

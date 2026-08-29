@@ -1,0 +1,32 @@
+.PageHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: $space-md $space-lg;
+  background-color: $color-bg-page;
+
+  .left {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+
+    svg {
+      cursor: pointer;
+    }
+  }
+
+  &.floating {
+    position: sticky;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+  }
+
+  .title {
+    font-size: $text-size-xl;
+    font-weight: 600;
+    color: $color-text-primary;
+  }
+}

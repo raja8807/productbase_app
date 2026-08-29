@@ -1,0 +1,11 @@
+.CustomFormLayout {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  div[class="formRow"] {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+}

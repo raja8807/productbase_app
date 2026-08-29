@@ -1,0 +1,88 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.radioWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+}
+
+.input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+
+  &:checked ~ .circle {
+    border-color: $color-primary;
+
+    .dot {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  &:focus-visible ~ .circle {
+    box-shadow: 0 0 0 3px rgba($color-primary, 0.2);
+  }
+
+  &:disabled ~ .circle {
+    background-color: $color-bg-disabled;
+    border-color: $color-border;
+    cursor: not-allowed;
+  }
+}
+
+.circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  background-color: $color-bg-light;
+  border: 1.5px solid $color-border-dark;
+  border-radius: 50%;
+  transition: all $transition-fast;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &.hasError {
+    border-color: #ef4444;
+  }
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background-color: $color-primary;
+  border-radius: 50%;
+  opacity: 0;
+  transform: scale(0.5);
+  transition: all $transition-fast;
+}
+
+.label {
+  font-size: $text-size-sm;
+  color: $color-text-primary;
+}
+
+.errorText {
+  font-size: 12px;
+  color: #ef4444;
+}

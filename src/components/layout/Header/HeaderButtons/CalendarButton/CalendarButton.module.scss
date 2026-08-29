@@ -1,0 +1,21 @@
+.CalendarButton {
+  position: relative;
+  display: inline-flex;
+}
+
+.calendarBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: $space-sm;
+  color: $color-text-secondary;
+  position: relative;
+  border-radius: $radius-full;
+  transition: $transition-fast;
+  @include flexCenter;
+
+  &:hover {
+    background-color: $color-bg-hover;
+    color: $color-primary;
+  }
+}

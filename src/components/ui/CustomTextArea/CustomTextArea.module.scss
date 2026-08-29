@@ -1,0 +1,53 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  &.fullWidth {
+    width: 100%;
+  }
+}
+
+.label {
+  font-size: $text-size-sm;
+  font-weight: 500;
+  color: $color-text-primary;
+}
+
+.textarea {
+  width: 100%;
+  border: 1px solid $color-border;
+  border-radius: $radius-md;
+  background-color: $color-bg-light;
+  padding: 10px 14px;
+  font-size: $text-size-sm;
+  color: $color-text-primary;
+  outline: none;
+  resize: vertical;
+  min-height: 80px;
+  font-family: inherit;
+  transition:
+    border-color $transition-fast,
+    box-shadow $transition-fast;
+
+  &::placeholder {
+    // color: $color-text-tertiary;
+  }
+
+  &:focus {
+    border-color: $color-primary;
+    box-shadow: 0 0 0 3px rgba($color-primary, 0.1);
+  }
+
+  &.hasError {
+    border-color: #ef4444;
+    &:focus {
+      box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+    }
+  }
+}
+
+.errorText {
+  font-size: 12px;
+  color: #ef4444;
+}

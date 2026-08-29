@@ -1,0 +1,154 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  border: none;
+  outline: none;
+  cursor: pointer;
+  text-decoration: none;
+
+  font-weight: 500;
+  white-space: nowrap;
+
+  transition: all 0.2s ease;
+
+  border-radius: 6px;
+  // font-weight: 600;
+
+  .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+
+  &.fullWidth {
+    width: 100%;
+  }
+}
+
+/*==========================
+=           Sizes          =
+==========================*/
+
+.sm {
+  height: 34px;
+  padding: 0 14px;
+  font-size: 13px;
+}
+
+.md {
+  height: 40px;
+  padding: 0 18px;
+  font-size: 14px;
+}
+
+.lg {
+  height: 46px;
+  padding: 0 24px;
+  font-size: 15px;
+}
+
+/*==========================
+=         Variants         =
+==========================*/
+
+.primary {
+  background: $color-primary;
+  color: #fff;
+
+  &:hover:not(:disabled) {
+    background: $color-primary-hover;
+  }
+}
+
+.color-secondary {
+  background: $color-secondary;
+  color: #fff;
+
+  &:hover:not(:disabled) {
+    background: $color-secondary-hover;
+  }
+}
+
+.outline {
+  background: transparent;
+  color: $color-secondary;
+  border: 1px solid $color-border-dark;
+
+  &:hover:not(:disabled) {
+    border-color: $color-primary;
+    color: $color-primary;
+  }
+}
+
+.light {
+  background: rgba($color-primary, 0.08);
+  color: $color-primary;
+
+  &:hover:not(:disabled) {
+    background: rgba($color-primary, 0.14);
+  }
+}
+
+.ghost {
+  background: transparent;
+  color: $color-secondary;
+
+  &:hover:not(:disabled) {
+    background: rgba($color-secondary, 0.05);
+  }
+}
+
+.danger {
+  background: #dc2626;
+  color: #fff;
+
+  &:hover:not(:disabled) {
+    background: #b91c1c;
+  }
+}
+
+/*==========================
+=      Disabled State      =
+==========================*/
+
+.disabled {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/*==========================
+=        Loading           =
+==========================*/
+
+.loading {
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+.spinner {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-top-color: #fff;
+
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,87 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(2px);
+}
+
+.modal {
+  background-color: $color-bg-light;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-lg;
+  width: 100%;
+  max-width: 600px;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  animation: slideIn 0.3s ease-out forwards;
+  
+  @include respond-below(md) {
+    max-width: 95%;
+  }
+}
+
+.header {
+  padding: $space-lg;
+  border-bottom: 1px solid $color-border;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  h2 {
+    margin: 0;
+    font-size: $text-size-lg;
+    color: $color-text-primary;
+    font-weight: 600;
+  }
+}
+
+.closeBtn {
+  background: none;
+  border: none;
+  color: $color-text-secondary;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color $transition-fast;
+
+  &:hover {
+    background-color: $color-bg-hover;
+    color: $color-text-primary;
+  }
+}
+
+.body {
+  padding: $space-lg;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.footer {
+  padding: $space-lg;
+  border-top: 1px solid $color-border;
+  display: flex;
+  justify-content: flex-end;
+  gap: $space-md;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

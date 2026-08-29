@@ -1,0 +1,116 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.switchWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+
+  &:checked ~ .track {
+    background-color: $color-primary;
+    border-color: $color-primary;
+
+    .thumb {
+      transform: translateX(100%);
+    }
+  }
+
+  &:focus-visible ~ .track {
+    box-shadow: 0 0 0 3px rgba($color-primary, 0.2);
+  }
+
+  &:disabled ~ .track {
+    background-color: $color-bg-disabled;
+    border-color: $color-border;
+    cursor: not-allowed;
+
+    .thumb {
+      // background-color: $color-text-tertiary;
+    }
+  }
+}
+
+.track {
+  position: relative;
+  background-color: $color-border-dark;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  transition: all $transition-fast;
+  display: flex;
+  align-items: center;
+  padding: 2px;
+
+  .hasError & {
+    border-color: #ef4444;
+  }
+}
+
+.thumb {
+  background-color: #fff;
+  border-radius: 50%;
+  transition: transform $transition-fast;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Sizes */
+.sm {
+  .track {
+    width: 32px;
+    height: 18px;
+  }
+  .thumb {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+.md {
+  .track {
+    width: 44px;
+    height: 24px;
+  }
+  .thumb {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.lg {
+  .track {
+    width: 56px;
+    height: 30px;
+  }
+  .thumb {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.label {
+  font-size: $text-size-sm;
+  color: $color-text-primary;
+}
+
+.errorText {
+  font-size: 12px;
+  color: #ef4444;
+}

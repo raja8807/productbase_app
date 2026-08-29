@@ -1,0 +1,196 @@
+@use "@/styles/scss/variables" as *;
+@use "@/styles/scss/media_queries" as *;
+
+.animatedBackground {
+  position: relative;
+  background: $gradient-hero;
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  overflow: hidden;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 50% 0%;
+  }
+  50% {
+    background-position: 50% 100%;
+  }
+  100% {
+    background-position: 50% 0%;
+  }
+}
+
+.parallaxWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.wrapper1 {
+  transform: translate(
+    calc(var(--mouse-x, 0) * 30px),
+    calc(var(--mouse-y, 0) * 30px)
+  );
+}
+
+.wrapper2 {
+  transform: translate(
+    calc(var(--mouse-x, 0) * -20px),
+    calc(var(--mouse-y, 0) * -20px)
+  );
+}
+
+.wrapper3 {
+  transform: translate(
+    calc(var(--mouse-x, 0) * 50px),
+    calc(var(--mouse-y, 0) * 50px)
+  );
+}
+
+.wrapper4 {
+  transform: translate(
+    calc(var(--mouse-x, 0) * 40px),
+    calc(var(--mouse-y, 0) * 40px)
+  );
+}
+
+.wrapper5 {
+  transform: translate(
+    calc(var(--mouse-x, 0) * -35px),
+    calc(var(--mouse-y, 0) * -35px)
+  );
+}
+
+.bgCircle {
+  background-color: $color-accent;
+  opacity: 0.1;
+  border-radius: 100rem;
+  position: absolute;
+  pointer-events: none;
+}
+
+@keyframes floatAnim1 {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes floatAnim2 {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(15px);
+  }
+}
+
+@keyframes floatAnim3 {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes floatAnim4 {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(12px);
+  }
+}
+
+@keyframes floatAnim5 {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+.circle1 {
+  z-index: 1;
+  width: 1.875rem;
+  height: 1.875rem;
+  top: 13.125rem;
+  left: 6.563rem;
+  animation: floatAnim1 4s ease-in-out infinite;
+}
+
+.circle2 {
+  z-index: 1;
+  width: 5.625rem;
+  height: 5.625rem;
+  top: 17.188rem;
+  left: 11.25rem;
+  animation: floatAnim2 5s ease-in-out infinite;
+}
+
+.circle3 {
+  z-index: 1;
+  width: 10.625rem;
+  height: 10.625rem;
+  bottom: 3.775rem;
+  right: 3.613rem;
+  animation: floatAnim3 6s ease-in-out infinite;
+
+  @include respond-below(md) {
+    bottom: 11.875rem;
+    right: 7.813rem;
+  }
+}
+
+.circle4 {
+  z-index: 1;
+  width: 7.5rem;
+  height: 7.5rem;
+  top: 22rem;
+  right: 12rem;
+  animation: floatAnim4 4.5s ease-in-out infinite;
+
+  @include respond-below(md) {
+    top: 15rem;
+    right: 3rem;
+    width: 5rem;
+    height: 5rem;
+  }
+}
+
+.circle5 {
+  z-index: 1;
+  width: 4rem;
+  height: 4rem;
+  bottom: 15rem;
+  left: 10rem;
+  animation: floatAnim5 5.5s ease-in-out infinite;
+
+  @include respond-below(md) {
+    bottom: 8rem;
+    left: 2rem;
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+.contentLayer {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+}

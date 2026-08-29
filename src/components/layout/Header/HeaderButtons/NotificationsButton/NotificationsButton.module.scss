@@ -1,0 +1,36 @@
+.NotificationsButton {
+  position: relative;
+  display: inline-flex;
+}
+
+.bellBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: $space-sm;
+  color: $color-text-secondary;
+  position: relative;
+  border-radius: $radius-full;
+  transition: $transition-fast;
+  @include flexCenter;
+
+  &:hover {
+    background-color: $color-bg-hover;
+    color: $color-primary;
+  }
+}
+
+.bubble {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  font-size: 9px;
+  font-weight: bold;
+  background-color: $color-primary;
+  color: $color-text-white;
+  width: 16px;
+  height: 16px;
+  @include flexCenter;
+  border-radius: 50%;
+  border: 2px solid $color-bg-light;
+}

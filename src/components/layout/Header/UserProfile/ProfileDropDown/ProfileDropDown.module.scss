@@ -1,0 +1,120 @@
+.ProfileDropDown {
+  position: absolute;
+  background-color: $color-bg-light;
+  box-shadow: $shadow-xl;
+  right: -8px;
+  top: 64px;
+  border-radius: $radius-lg;
+  width: 290px;
+  z-index: 100;
+  border: 1px solid $color-border;
+  
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+
+  &.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .header {
+    padding: $space-lg;
+    display: flex;
+    align-items: center;
+    gap: $space-md;
+    border-bottom: 1px solid $color-border-light;
+    background: linear-gradient(to right, rgba($color-primary, 0.05), transparent);
+
+    .img {
+      img {
+        border-radius: 50%;
+        width: 48px;
+        height: 48px;
+        object-fit: cover;
+        border: 2px solid $color-primary-light;
+        background-color: $color-bg-secondary;
+      }
+    }
+
+    .text {
+      h4 {
+        font-size: $text-size-sm;
+        font-weight: 700;
+        color: $color-text-primary;
+        margin: 0;
+        margin-bottom: 2px;
+      }
+      p {
+        font-size: 11px;
+        color: $color-text-secondary;
+        margin: 0;
+        margin-bottom: 6px;
+      }
+      small {
+        display: inline-block;
+        font-size: 10px;
+        background-color: $color-primary-hover-light;
+        color: $color-primary;
+        padding: 2px 8px;
+        border-radius: $radius-full;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .links {
+    padding: $space-sm;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+
+    .navItem {
+      display: flex;
+      align-items: center;
+      padding: 10px $space-md;
+      color: $color-text-secondary;
+      text-decoration: none;
+      font-size: $text-size-sm;
+      font-weight: 500;
+      border-radius: $radius-md;
+      transition: $transition-fast;
+
+      svg {
+        margin-right: $space-md;
+        width: 18px;
+        height: 18px;
+        color: $color-text-tertiary;
+        transition: $transition-fast;
+      }
+
+      &:hover {
+        background-color: $color-bg-hover;
+        color: $color-primary;
+
+        svg {
+          color: $color-primary;
+        }
+      }
+
+      &.signOut {
+        margin-top: $space-xs;
+        border-top: 1px solid $color-border-light;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        padding-top: 12px;
+
+        &:hover {
+          background-color: $color-danger-light;
+          color: $color-danger-dark;
+          
+          svg {
+            color: $color-danger-dark;
+          }
+        }
+      }
+    }
+  }
+}
