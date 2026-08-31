@@ -101,6 +101,15 @@ const CreateProductsBaseScreen = () => {
     }
   };
 
+  const hadleDownloadTemplate = () => {
+    const link = document.createElement("a");
+    link.href = "/templates/ProductBase_Template.xlsx";
+    link.download = "ProductBase_Template.xlsx";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   const { mutateAsync, isPending } = useImportProductFile();
 
   const { setActiveJob } = useJob();
@@ -130,7 +139,13 @@ const CreateProductsBaseScreen = () => {
               Clear rows
             </CustomButton>
           ) : (
-            <CustomButton variant="outline"> Download template</CustomButton>
+            <CustomButton
+              variant="outline"
+              rightIcon={<FileSpreadsheet />}
+              onClick={hadleDownloadTemplate}
+            >
+              Download Excel template
+            </CustomButton>
           )
         }
       >
@@ -149,7 +164,11 @@ const CreateProductsBaseScreen = () => {
               <FileUpload onFileSelect={handleFile} errorMessage={error} />
             </div>
             <div className={styles.btn}>
-              <CustomButton variant="outline" rightIcon={<FileSpreadsheet />}>
+              <CustomButton
+                variant="outline"
+                rightIcon={<FileSpreadsheet />}
+                onClick={hadleDownloadTemplate}
+              >
                 Download Excel template
               </CustomButton>
               <small>Or</small>
