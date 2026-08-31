@@ -94,115 +94,115 @@
 
 .table {
   width: 100%;
-}
 
-/* AG Grid Theme Overrides */
+  /* AG Grid Theme Overrides */
 
-:global(.ag-theme-quartz) {
-  --ag-font-family: inherit;
-  --ag-font-size: 14px;
-  --ag-border-color: transparent;
-  --ag-row-border-color: transparent;
-  --ag-header-background-color: #f9fafb;
-  --ag-header-foreground-color: $color-text-secondary;
-  --ag-header-height: 48px;
-  --ag-row-height: 48px;
-  --ag-selected-row-background-color: transparent;
-  --ag-checkbox-checked-color: $color-primary;
-  --ag-accent-color: $color-primary;
-  --ag-background-color: transparent;
-}
-
-/* Header */
-
-:global(.ag-header-cell-label) {
-  font-size: $text-size-sm;
-  font-weight: 600;
-  color: $color-text-secondary;
-}
-
-:global(.ag-header-cell) {
-  border-right: none !important;
-  padding: 0 $space-md !important;
-}
-
-:global(.ag-header) {
-  border-bottom: 1px solid $color-border !important;
-}
-
-/* Cells */
-
-:global(.ag-cell) {
-  display: flex;
-  align-items: center;
-  border-right: none !important;
-  color: $color-text-primary;
-  padding: 0 $space-md !important;
-  font-size: $text-size-sm;
-  // font-weight: 600;
-
-  cursor: pointer;
-}
-
-/* Rows */
-
-:global(.ag-row) {
-  border-bottom: 1px solid $color-border !important;
-  transition: background-color $transition-fast;
-}
-
-:global(.ag-row:last-child) {
-  border-bottom: none !important;
-}
-
-:global(.ag-row:hover) {
-  background-color: rgba($color-bg-hover, 0.5) !important;
-}
-
-:global(.ag-row-selected) {
-  background-color: rgba($color-bg-hover, 0.5) !important;
-}
-
-/* Remove blue focus */
-
-:global(.ag-cell-focus),
-:global(.ag-cell-inline-editing) {
-  border: none !important;
-  box-shadow: none !important;
-}
-
-/* Pagination */
-
-:global(.ag-paging-panel) {
-  border-top: 1px solid #e5e7eb;
-}
-
-.rowActions {
-  display: flex;
-  gap: 8px;
-  align-items: center;
-}
-
-.rowActionBtn {
-  background: none;
-  border: none;
-  color: $color-text-secondary;
-  cursor: pointer;
-  padding: 6px;
-  border-radius: 4px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition:
-    background-color $transition-fast,
-    color $transition-fast;
-
-  svg {
-    width: 16px;
+  :global(.ag-theme-quartz) {
+    --ag-font-family: inherit;
+    --ag-font-size: 14px;
+    --ag-border-color: transparent;
+    --ag-row-border-color: transparent;
+    --ag-header-background-color: #f9fafb;
+    --ag-header-foreground-color: $color-text-secondary;
+    --ag-header-height: 48px;
+    --ag-row-height: 48px;
+    --ag-selected-row-background-color: transparent;
+    --ag-checkbox-checked-color: $color-primary;
+    --ag-accent-color: $color-primary;
+    --ag-background-color: transparent;
   }
 
-  &:hover {
-    background-color: rgba($color-bg-hover, 0.8);
-    color: $color-primary;
+  /* Header */
+
+  :global(.ag-header-cell-label) {
+    font-size: $text-size-sm;
+    font-weight: 600;
+    color: $color-text-secondary;
+  }
+
+  :global(.ag-header-cell) {
+    border-right: none !important;
+    padding: 0 $space-md !important;
+  }
+
+  :global(.ag-header) {
+    border-bottom: 1px solid $color-border !important;
+  }
+
+  /* Cells */
+
+  :global(.ag-cell) {
+    display: flex;
+    align-items: center;
+    border-right: none !important;
+    color: $color-text-primary;
+    padding: 0 $space-md !important;
+    font-size: $text-size-sm;
+    // font-weight: 600;
+
+    cursor: pointer;
+  }
+
+  /* Rows */
+
+  :global(.ag-row) {
+    border-bottom: 1px solid $color-border !important;
+    transition: background-color $transition-fast;
+  }
+
+  :global(.ag-row:last-child) {
+    border-bottom: none !important;
+  }
+
+  :global(.ag-row:hover) {
+    background-color: rgba($color-bg-hover, 0.5) !important;
+  }
+
+  :global(.ag-row-selected) {
+    background-color: rgba($color-bg-hover, 0.5) !important;
+  }
+
+  /* Remove blue focus */
+
+  :global(.ag-cell-focus),
+  :global(.ag-cell-inline-editing) {
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  /* Pagination */
+
+  :global(.ag-paging-panel) {
+    border-top: 1px solid #e5e7eb;
+  }
+
+  .rowActions {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+
+  .rowActionBtn {
+    background: none;
+    border: none;
+    color: $color-text-secondary;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition:
+      background-color $transition-fast,
+      color $transition-fast;
+
+    svg {
+      width: 16px;
+    }
+
+    &:hover {
+      background-color: rgba($color-bg-hover, 0.8);
+      color: $color-primary;
+    }
   }
 }

@@ -3,6 +3,8 @@
 import React, { useId } from "react";
 import styles from "./CustomSelect.module.scss";
 
+// pb_test_cKkRvMP6wAQVjJnURLn_uLtU7p4uc2SLbu9kC_dun0E
+
 export default function CustomSelect({
   label,
   error,
@@ -45,7 +47,6 @@ export default function CustomSelect({
           id={selectId}
           className={styles.select}
           value={value}
-          defaultValue={value}
           onChange={(e) => {
             const selectedOption = options.find(
               (o) => o.value === e.target.value,

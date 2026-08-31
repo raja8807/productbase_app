@@ -21,6 +21,7 @@ import {
   Package,
   PackageSearch,
   KeyRound,
+  Braces,
 } from "lucide-react";
 import { Image } from "react-bootstrap";
 
@@ -36,15 +37,16 @@ const SideBar = ({ sideBarCollapsed, setSidebarCollapsed }) => {
       icon: <PackageSearch />,
     },
 
+    // {
+    //   name: "Chats",
+    //   href: "/chats",
+    //   icon: <MessageSquareCode />,
+    // },
     {
-      name: "Chats",
-      href: "/chats",
-      icon: <MessageSquareCode />,
-    },
-    {
-      name: "API Keys",
-      href: "/keys",
-      icon: <KeyRound />,
+      name: "API",
+      href: "/pb-api",
+      // icon: <KeyRound />,
+      icon: <Braces />,
     },
     // {
     //   name: "CRM",

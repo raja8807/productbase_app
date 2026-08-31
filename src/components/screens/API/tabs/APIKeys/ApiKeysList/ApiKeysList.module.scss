@@ -1,0 +1,113 @@
+.ApiKeysList {
+  overflow: hidden;
+  border: 1px solid $color-border-dark;
+  border-radius: 10px;
+
+  .listHeader,
+  .item {
+    display: grid;
+    grid-template-columns: 1.1fr 2fr 1fr 1fr 50px;
+    align-items: center;
+    gap: 20px;
+    padding: 15px 18px;
+  }
+
+  .listHeader {
+    background: $color-bg-hover;
+    border-bottom: 1px solid $color-border-dark;
+    color: $color-text-secondary;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .item {
+    min-height: 70px;
+    border-bottom: 1px solid $color-border-dark;
+
+    &.deleting {
+      opacity: 0.5;
+    }
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+
+  .name {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    strong {
+      color: $color-text-primary;
+      font-size: 13px;
+    }
+  }
+
+  .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 7px;
+    background: $color-bg-secondary;
+    color: $color-primary;
+  }
+
+  .key {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    code {
+      min-width: 0;
+      overflow: hidden;
+      color: $color-text-primary;
+      font-family: monospace;
+      font-size: 12px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 28px;
+      height: 28px;
+      padding: 0;
+      border: 0;
+      border-radius: 6px;
+      background: transparent;
+      color: $color-text-secondary;
+      cursor: pointer;
+    }
+  }
+
+  .date,
+  .lastUsed {
+    color: $color-text-secondary;
+    font-size: 12px;
+  }
+
+  .delete {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border: 0;
+    border-radius: 7px;
+    background: transparent;
+    background-color: $color-danger-light;
+    color: $color-danger-dark;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $color-danger;
+      color: $color-danger-light;
+    }
+  }
+}

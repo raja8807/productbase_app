@@ -1,0 +1,222 @@
+.CreateAPIKeyForm {
+  background: #fff;
+
+  .header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 28px;
+
+    p {
+      margin: 7px 0 0;
+      color: #6b7280;
+      font-size: 14px;
+    }
+  }
+
+  .title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    svg {
+      color: #4f46e5;
+    }
+
+    h1 {
+      margin: 0;
+      color: #111827;
+      font-size: 24px;
+      font-weight: 700;
+    }
+  }
+
+  .createCard {
+    // max-width: 760px;
+    width: 100%;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    background: #fff;
+    margin-bottom: 32px;
+  }
+
+  .createHeader {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 22px 24px;
+    border-bottom: 1px solid #e5e7eb;
+
+    h2 {
+      margin: 0 0 6px;
+      color: #111827;
+      font-size: 17px;
+      font-weight: 700;
+    }
+
+    p {
+      margin: 0;
+      color: #6b7280;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+  }
+
+  .closeButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    border: 0;
+    border-radius: 7px;
+    background: transparent;
+    color: #6b7280;
+    cursor: pointer;
+
+    &:hover {
+      background: #f3f4f6;
+      color: #111827;
+    }
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    padding: 24px;
+    width: 100%;
+
+    .controls {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 22px;
+    }
+
+    @include respond-below(md) {
+      .controls {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+
+  .field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    label {
+      color: #374151;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    input,
+    select {
+      width: 100%;
+      box-sizing: border-box;
+      height: 42px;
+      padding: 0 12px;
+      border: 1px solid #d1d5db;
+      border-radius: 7px;
+      outline: none;
+      background: #fff;
+      color: #111827;
+      font-size: 13px;
+
+      &:focus {
+        border-color: #4f46e5;
+        box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.08);
+      }
+    }
+
+    span {
+      color: #9ca3af;
+      font-size: 11px;
+    }
+  }
+
+  .actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    padding-top: 4px;
+  }
+
+  .cancelButton {
+    height: 40px;
+    padding: 0 16px;
+    border: 1px solid #d1d5db;
+    border-radius: 7px;
+    background: #fff;
+    color: #374151;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+
+    &:hover {
+      background: #f9fafb;
+    }
+  }
+
+  @media (max-width: 700px) {
+    // padding: 24px 20px;
+
+    .header {
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .createCard {
+      width: 100%;
+    }
+  }
+}
+
+.keyModal {
+  p {
+    margin: 0 0 18px;
+    color: #6b7280;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  &__key {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    // Leave space for the copy button
+    input {
+      padding-right: 48px;
+    }
+  }
+
+  &__copy {
+    position: absolute;
+    right: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    padding: 0;
+    border: 0;
+    border-radius: 6px;
+    background: transparent;
+    color: #6b7280;
+    cursor: pointer;
+
+    &:hover {
+      background: #f3f4f6;
+      color: #111827;
+    }
+
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+}

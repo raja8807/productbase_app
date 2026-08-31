@@ -1,0 +1,280 @@
+.apiDocs {
+  min-height: 100%;
+  color: $color-text-primary;
+
+  &__layout {
+    display: grid;
+    // grid-template-columns: 250px minmax(0, 1fr) 180px;
+    max-width: 1500px;
+    margin: 0 auto;
+  }
+
+  &__search {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: 38px;
+    padding: 0 10px;
+    margin-bottom: 24px;
+    border: 1px solid $color-accent;
+    border-radius: 7px;
+    color: $color-text-light;
+
+    input {
+      width: 100%;
+      border: 0;
+      outline: 0;
+      color: $color-text-primary;
+      font-size: 13px;
+
+      &::placeholder {
+        color: $color-text-light;
+      }
+    }
+  }
+
+  &__content {
+    min-width: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    border-bottom: 1px solid $color-border-dark;
+  }
+
+  &__section {
+    margin: 44px 0;
+
+    h3 {
+      margin: 0 0 10px;
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    > p {
+      margin: 0 0 18px;
+      color: $color-text-secondary;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+  }
+
+  &__sectionHeader {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+
+    svg {
+      color: $color-primary;
+    }
+
+    h3 {
+      margin: 0;
+    }
+  }
+
+  &__code {
+    overflow: hidden;
+
+    border-radius: 9px;
+    background: $color-text-primary;
+  }
+
+  &__codeHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 9px 14px;
+    border-bottom: 1px solid #374151;
+    color: $color-text-light;
+    font-size: 11px;
+
+    button {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      padding: 4px 7px;
+      border: 0;
+      border-radius: 5px;
+      background: transparent;
+      color: #d1d5db;
+      font-size: 11px;
+      cursor: pointer;
+
+      &:hover {
+        background: #374151;
+      }
+    }
+  }
+
+  pre {
+    margin: 0;
+    padding: 18px;
+    overflow-x: auto;
+
+    code {
+      color: $color-accent;
+      font-family: "SFMono-Regular", Consolas, monospace;
+      font-size: 12px;
+      line-height: 1.7;
+      white-space: pre;
+    }
+  }
+
+  &__parameters {
+    overflow: hidden;
+    border: 1px solid $color-accent;
+    border-radius: 9px;
+  }
+
+  &__parameter {
+    padding: 14px 16px;
+    border-bottom: 1px solid $color-accent;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+
+    > div {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    code {
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    span {
+      padding: 3px 6px;
+      border-radius: 4px;
+      background: #f3f4f6;
+      color: $color-text-secondary;
+      font-family: monospace;
+      font-size: 10px;
+    }
+
+    p {
+      margin: 7px 0 0;
+      color: $color-text-secondary;
+      font-size: 12px;
+    }
+  }
+
+  &__responseHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+
+    h3 {
+      margin-bottom: 4px;
+    }
+
+    p {
+      margin: 0;
+      color: $color-text-light;
+      font-size: 12px;
+    }
+  }
+
+  &__status {
+    padding: 5px 8px;
+    border-radius: 5px;
+    background: #ecfdf5;
+    color: #047857;
+    font-family: monospace;
+    font-size: 11px;
+    font-weight: 700;
+  }
+
+  &__errors {
+    overflow: hidden;
+    border: 1px solid $color-border-dark;
+    border-radius: 9px;
+
+    div {
+      display: flex;
+      gap: 16px;
+      padding: 13px 16px;
+      border-bottom: 1px solid $color-border-dark;
+      font-size: 13px;
+
+      &:last-child {
+        border-bottom: 0;
+      }
+    }
+
+    strong {
+      width: 30px;
+      color: #dc2626;
+      font-family: monospace;
+    }
+
+    span {
+      color: $color-text-secondary;
+    }
+  }
+
+  &__toc {
+    position: sticky;
+    top: 24px;
+    align-self: start;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 48px 20px;
+
+    > span {
+      margin-bottom: 4px;
+      color: $color-text-light;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+    }
+
+    a {
+      color: $color-text-secondary;
+      font-size: 12px;
+      text-decoration: none;
+
+      &:hover {
+        color: $color-primary;
+      }
+    }
+  }
+
+  @media (max-width: 1100px) {
+    &__layout {
+      grid-template-columns: 220px minmax(0, 1fr);
+    }
+
+    &__toc {
+      display: none;
+    }
+  }
+
+  @media (max-width: 700px) {
+    &__header {
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 20px;
+      padding: 24px;
+    }
+
+    &__layout {
+      display: block;
+    }
+
+    &__sidebar {
+      min-height: auto;
+      border-right: 0;
+      border-bottom: 1px solid $color-accent;
+    }
+
+    &__content {
+      padding: 32px 20px;
+    }
+  }
+}

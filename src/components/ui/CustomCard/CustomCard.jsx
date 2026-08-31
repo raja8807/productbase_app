@@ -12,15 +12,16 @@ const CustomCard = ({
     <div
       className={`${styles.CustomCard} ${noPadding ? styles.noPadding : ""}`}
       // data-aos='fade-up'
-      
     >
-      <div className={styles.topBar}>
-        <div className={styles.left}>
-          {head && <h2>{head}</h2>}
-          {leftElement}
+      {head && (
+        <div className={styles.topBar}>
+          <div className={styles.left}>
+            {head && <h2>{head}</h2>}
+            {leftElement}
+          </div>
+          {rightElement}
         </div>
-        {rightElement}
-      </div>
+      )}
       <div className={`${styles.content} ${noPadding ? styles.noPadding : ""}`}>
         {children}
       </div>

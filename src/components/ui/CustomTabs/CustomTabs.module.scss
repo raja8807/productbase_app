@@ -1,12 +1,11 @@
-@use "@/styles/scss/variables" as *;
-
 .tabsBar {
   display: flex;
   gap: $space-md;
   border-bottom: 1px solid $color-border;
-  margin-top: $space-md;
+  // margin-top: $space-md;
   overflow-x: auto;
-  
+  background-color: white;
+
   /* Hide scrollbar for cleaner look */
   scrollbar-width: none;
   &::-webkit-scrollbar {
@@ -29,9 +28,9 @@
   &:hover {
     color: $color-text-primary;
   }
-}
 
-.activeTab {
-  color: $color-primary;
-  border-bottom-color: $color-primary;
+  &.activeTab {
+    color: $color-primary;
+    border-bottom-color: $color-primary;
+  }
 }

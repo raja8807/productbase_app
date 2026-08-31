@@ -69,7 +69,7 @@ const ProductsList = ({ file, clearFile, products, createProductList,isPending }
           </button>
         </div>
 
-        <CustomButton loading={isPending} rightIcon={<SaveCheck />} fullWidth onClick={createProductList}>
+        <CustomButton loading={isPending} rightIcon={<SaveCheck />}  onClick={createProductList}>
           Create product base
         </CustomButton>
       </div>

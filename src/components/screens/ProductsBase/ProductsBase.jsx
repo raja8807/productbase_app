@@ -142,7 +142,7 @@ export default function ProductsBaseScreen() {
               selectable
               dropdownFieldName="category"
               actions={tableActions}
-              height={400}
+              height={500}
               loading={searchIsLoading}
             />
 
