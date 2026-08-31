@@ -21,7 +21,7 @@ const PoroductsListSaveLoading = () => {
 
   useEffect(() => {
     if (!activeJob) {
-      // router.push("/productbase");
+      router.push("/productbase");
     }
   }, [activeJob, router]);
 
