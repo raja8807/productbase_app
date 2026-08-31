@@ -9,8 +9,8 @@ import { Image } from "react-bootstrap";
 
 const AuthScreen = () => {
   const [values, setValues] = useState({
-    email: "yora8807+1@gmail.com",
-    password: "test123",
+    email: "",
+    password: "",
     confirmPassword: "",
   });
 
