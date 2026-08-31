@@ -82,7 +82,7 @@ const CreateProductsBaseScreen = () => {
   const handleLoadSampleData = async () => {
     try {
       const response = await fetch(
-        "/sample/ProductBase_Catalog_200_Products.xlsx",
+        "/sample/ProductBase_Catalog_50_Products.xlsx",
       );
 
       if (!response.ok) {
@@ -91,7 +91,7 @@ const CreateProductsBaseScreen = () => {
 
       const blob = await response.blob();
 
-      const file = new File([blob], "ProductBase_Catalog_200_Products.xlsx", {
+      const file = new File([blob], "ProductBase_Catalog_50_Products.xlsx", {
         type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
       });
 

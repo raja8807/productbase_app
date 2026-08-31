@@ -1,9 +1,11 @@
-# Nirvag Pro Web - Project Memory
+# ProductBase Web - Project Memory
 
 ## Overview
-Nirvag Pro Web is a web application built using Next.js 16 (App Router) and React 19. It serves as an administrative and management portal with features like CRM, Project Management, and Workforce Management.
+
+ProductBase Web is a web application built using Next.js 16 (App Router) and React 19. It serves as an administrative and management portal with features like CRM, Project Management, and Workforce Management.
 
 ## Technology Stack
+
 - **Framework:** Next.js 16 (App Router)
 - **Library:** React 19 (Functional Components & Hooks)
 - **Styling:** SCSS Modules (Strictly no Tailwind, styled-components, or inline styles)
@@ -13,6 +15,7 @@ Nirvag Pro Web is a web application built using Next.js 16 (App Router) and Reac
 - **Icons & Animations:** lucide-react, AOS
 
 ## Architecture & Conventions
+
 1. **Screen Component Pattern:**
    - Every page must have its own Screen Component inside `src/components/screens/`.
    - `src/app/[page]/page.js` files must ONLY import and render their respective Screen Component. No UI logic is allowed in `page.js`.
@@ -26,6 +29,7 @@ Nirvag Pro Web is a web application built using Next.js 16 (App Router) and Reac
    - Never hardcode media queries or standard variables (colors, spacing, etc.). Use predefined mixins like `@include respond-above(md)`.
 
 ## Implemented Modules & Features
+
 - **CRM (`src/components/screens/crm/`)**
   - Clients, CreateClient, ClientDetails
   - Leads, LeadDetails
@@ -41,6 +45,7 @@ Nirvag Pro Web is a web application built using Next.js 16 (App Router) and Reac
   - Layout & Navigation
 
 ## Development Guidelines
+
 - Follow absolute imports (e.g., `import Button from "@/components/ui/Button/Button";`).
 - Store constants in `src/constants/constants.js`.
 - Manage global state via `src/context/`.

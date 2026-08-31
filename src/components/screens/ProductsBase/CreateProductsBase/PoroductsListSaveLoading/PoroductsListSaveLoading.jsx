@@ -21,7 +21,7 @@ const PoroductsListSaveLoading = () => {
 
   useEffect(() => {
     if (!activeJob) {
-      router.push("/productbase");
+      // router.push("/productbase");
     }
   }, [activeJob, router]);
 
@@ -65,9 +65,9 @@ const PoroductsListSaveLoading = () => {
         <h2>Processing your data</h2>
 
         <p className={styles.description}>
-          We&apos;re generating embeddings and building
-          <br />
-          the search index for your products.
+          We&apos;re generating embeddings and building the search index for your products.
+          <br/>
+          This may take upto 5 minutes.
         </p>
 
         {/* Progress */}

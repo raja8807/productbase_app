@@ -9,7 +9,7 @@ const mockNotifications = [
     id: 1, 
     type: "success", 
     title: "Project Approved", 
-    desc: "The Nirvag project was approved.", 
+    desc: "The ProductBaseject was approved.", 
     time: "2 min ago", 
     unread: true 
   },
