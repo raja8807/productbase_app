@@ -28,7 +28,7 @@ const ApiDocs = () => {
         "Authenticate every request using an API key generated from your ProductBase dashboard.",
 
       request: {
-        reqUrl: `curl https://api.productbase.app/api/v1/products/search \\
+        reqUrl: `curl https://productbase-api.vercel.app/api/v1/products/search?q='your search query' \\
   -H "x-api-key: YOUR_API_KEY"`,
 
         queryParams: [

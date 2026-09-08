@@ -16,10 +16,11 @@ import { useClearAllProducts, useProducts } from "@/hooks/useProducts";
 import { useSearchProducts } from "@/hooks/useSearch";
 import ProductTableSkeleton from "@/components/common/ProductTableSkeleton/ProductTableSkeleton";
 import { useAuth } from "@/context/AuthContext";
+import ProductModal from "./ProductModal/ProductModal";
 
 export default function ProductsBaseScreen() {
-
-  const {session} = useAuth()
+  const { session } = useAuth();
+  const [showProduct,setShowProduct] = useState(null)
 
   const columns = [
     {
@@ -59,7 +60,9 @@ export default function ProductsBaseScreen() {
       {
         name: "View Product",
         icon: <Eye size={16} />,
-        onClick: (row) => {},
+        onClick: (row) => {
+          setShowProduct(row)
+        },
       },
     ],
     [],
@@ -114,6 +117,7 @@ export default function ProductsBaseScreen() {
   // We only show sites (projects) that are active
   return (
     <>
+      <ProductModal product={showProduct} setShow={setShowProduct}/>
       <PageLayout>
         {isEmptyState ? (
           <div className={styles.empty}>
@@ -133,7 +137,6 @@ export default function ProductsBaseScreen() {
           </div>
         ) : (
           <div>
-           
             <DataTable
               rows={searchProducts || rows}
               columns={columns}
@@ -146,7 +149,7 @@ export default function ProductsBaseScreen() {
               loading={searchIsLoading}
             />
 
-             <div className={styles.head}>
+            <div className={styles.head}>
               <form className={styles.search} onSubmit={handleSearch}>
                 <CustomInput
                   value={searchTerm}
