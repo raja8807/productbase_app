@@ -6,13 +6,18 @@ import SideBar from "./SideBar/SideBar";
 import AdminHeader from "../Header/AdminHeader";
 import { useAuth } from "@/context/AuthContext";
 import { JobProvider } from "@/context/JobContext";
+import { useRouter } from "next/navigation";
 
 const AdminLayout = ({ children }) => {
   const [sideBarCollapsed, setSidebarCollapsed] = useState(false);
+  const router = useRouter()
+
+  const isLanding = window?.location?.pathname === '/'
+  
 
   const { session } = useAuth();
 
-  if (!session) {
+  if (!session || isLanding) {
     return children;
   }
 
