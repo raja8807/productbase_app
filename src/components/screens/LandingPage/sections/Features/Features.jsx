@@ -1,0 +1,3 @@
+import React from "react";import {Code2,CloudUpload,Sparkles,Zap} from "lucide-react";import styles from "./Features.module.scss";
+const data=[[Sparkles,"AI-Powered Search","Understand user intent and return relevant products."],[CloudUpload,"Easy Data Import","Upload your product catalog from Excel in seconds."],[Code2,"Developer Friendly","Simple and powerful APIs with secure authentication."],[Zap,"Built for Growth","Scale your product search without the complexity."]];
+export default function Features(){return <section id="features" className={styles.section}><div className={styles.grid}>{data.map(([Icon,title,text])=><div className={styles.item} key={title}><div className={styles.icon}><Icon size={22}/></div><h3>{title}</h3><p>{text}</p></div>)}</div></section>}

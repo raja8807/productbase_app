@@ -1,0 +1,2 @@
+import React from "react";import {ArrowRight} from "lucide-react";import styles from "./CTA.module.scss";
+export default function CTA(){return <section className={styles.cta}><div className={styles.container}><span>READY TO GET STARTED?</span><h2>Build Smarter Product Experiences<br/>with <strong>ProductBase.</strong></h2><p>Start for free and add AI-powered search to your application.</p><div className={styles.actions}><a href="/auth">Get Started Free <ArrowRight size={16}/></a><a href="#docs">View Documentation</a></div></div></section>}
