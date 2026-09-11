@@ -107,7 +107,7 @@ export default function ProductsBaseScreen() {
   };
 
   if (error) {
-    return <p>Error..</p>;
+    return <p>something went wrong..</p>;
   }
 
   if (isLoading) {

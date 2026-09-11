@@ -1,5 +1,6 @@
 "use client";
 
+import AdminLaoyoutLoadingScreen from "@/components/common/LoadingScreen/AdminLaoyoutLoadingScreen/AdminLaoyoutLoadingScreen";
 import { useActiveImportJobs } from "@/hooks/useImportJob";
 import { useRouter, usePathname } from "next/navigation";
 import React, {
@@ -43,7 +44,7 @@ export const JobProvider = ({ children }) => {
   );
 
   if (isLoading) {
-    return <p>jobs loading..</p>;
+    return <AdminLaoyoutLoadingScreen />;
   }
 
   return <JobContext.Provider value={value}>{children}</JobContext.Provider>;

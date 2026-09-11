@@ -1,3 +1,52 @@
-import React from "react";import {ChevronRight,Code2,Database,FileSpreadsheet,KeyRound} from "lucide-react";import styles from "./HowItWorks.module.scss";
-const steps=[[FileSpreadsheet,"Upload Your Catalog","Import your products from an Excel file."],[Database,"We Process Your Data","Normalize data and create vector embeddings."],[KeyRound,"Get Your API Key","Instantly get your API key to access search."],[Code2,"Integrate & Search","Add AI-powered search to your application."]];
-export default function HowItWorks(){return <section id="how-it-works" className={styles.section}><div className={styles.container}><div className={styles.heading}><h2>How It Works</h2><p>Get started in minutes. From your data to AI-powered search.</p></div><div className={styles.steps}>{steps.map(([Icon,title,text],i)=><React.Fragment key={title}><div className={styles.step}><b>0{i+1}</b><Icon size={28}/><h3>{title}</h3><p>{text}</p></div>{i<3&&<ChevronRight className={styles.arrow}/>}</React.Fragment>)}</div></div></section>}
+import React from "react";
+import {
+  ChevronRight,
+  Code2,
+  Database,
+  FileSpreadsheet,
+  KeyRound,
+} from "lucide-react";
+import styles from "./HowItWorks.module.scss";
+const steps = [
+  [
+    FileSpreadsheet,
+    "Upload Your Catalog",
+    "Import your products from an Excel file.",
+  ],
+  [
+    Database,
+    "We Process Your Data",
+    "Normalize data and create vector embeddings.",
+  ],
+  [
+    KeyRound,
+    "Get Your API Key",
+    "Instantly get your API key to access search.",
+  ],
+  [Code2, "Integrate & Search", "Add AI-powered search to your application."],
+];
+export default function HowItWorks() {
+  return (
+    <section id="how-it-works" className={styles.section}>
+      <div className={styles.container}>
+        <div className={styles.heading}>
+          <h2>How It Works</h2>
+          <p>Get started in minutes. From your data to AI-powered search.</p>
+        </div>
+        <div className={styles.steps}>
+          {steps.map(([Icon, title, text], i) => (
+            <React.Fragment key={title}>
+              <div className={styles.step}>
+                <b>0{i + 1}</b>
+                <Icon size={28} />
+                <h3>{title}</h3>
+                <p>{text}</p>
+              </div>
+              {i < 3 && <ChevronRight className={styles.arrow} />}
+            </React.Fragment>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}

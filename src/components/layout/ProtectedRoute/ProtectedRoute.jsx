@@ -3,7 +3,7 @@
 import React, { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { useAuth } from "@/context/AuthContext";
-
+import LoadingScreen from "@/components/common/LoadingScreen/LoadingScreen";
 
 const ProtectedRoute = ({ children }) => {
   const router = useRouter();
@@ -16,7 +16,7 @@ const ProtectedRoute = ({ children }) => {
   }, [session, loading, router]);
 
   if (loading || !session) {
-    return <div>Loading...</div>;
+    return <LoadingScreen />;
   }
 
   return children;

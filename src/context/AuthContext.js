@@ -3,6 +3,7 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
 
 import { supabase } from "@/lib/supabase";
+import LoadingScreen from "@/components/common/LoadingScreen/LoadingScreen";
 
 export const AuthContext = createContext();
 
@@ -34,7 +35,7 @@ export const AuthProvider = ({ children }) => {
   }, []);
 
   if (loading) {
-    return <p>Loading..</p>;
+    return <LoadingScreen />;
   }
 
   return (

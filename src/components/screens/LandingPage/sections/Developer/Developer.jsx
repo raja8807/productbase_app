@@ -1,3 +1,47 @@
-import React from "react";import {Code2,FileText,ShieldCheck,Zap} from "lucide-react";import styles from "./Developer.module.scss";
-const items=[[Code2,"REST API","Simple and consistent API design."],[ShieldCheck,"API Key Authentication","Secure access to your product data."],[FileText,"Detailed Documentation","Get started quickly with our docs."],[Zap,"Built for Scale","Handle thousands of queries with ease."]];
-export default function Developer(){return <section id="docs" className={styles.section}><div className={styles.container}><div className={styles.heading}><small>BUILT FOR DEVELOPERS</small><h2>Simple APIs. <span>Powerful Search.</span></h2><p>Integrate AI search into your application with just a few lines of code.</p></div><div className={styles.grid}><pre><code>{`curl -X POST https://api.productbase.app/v1/search \\\n  -H "Authorization: Bearer YOUR_API_KEY" \\\n  -H "Content-Type: application/json" \\\n  -d '{"query":"wireless headphones","limit":10}'`}</code></pre><div>{items.map(([Icon,title,text])=><div className={styles.item} key={title}><Icon size={20}/><div><h4>{title}</h4><p>{text}</p></div></div>)}</div></div></div></section>}
+import React from "react";
+import { Code2, FileText, ShieldCheck, Zap } from "lucide-react";
+import styles from "./Developer.module.scss";
+const items = [
+  [Code2, "REST API", "Simple and consistent API design."],
+  [
+    ShieldCheck,
+    "API Key Authentication",
+    "Secure access to your product data.",
+  ],
+  [FileText, "Detailed Documentation", "Get started quickly with our docs."],
+  [Zap, "Built for Scale", "Handle thousands of queries with ease."],
+];
+export default function Developer() {
+  return (
+    <section id="docs" className={styles.section}>
+      <div className={styles.container}>
+        <div className={styles.heading}>
+          <small>BUILT FOR DEVELOPERS</small>
+          <h2>
+            Simple APIs. <span>Powerful Search.</span>
+          </h2>
+          <p>
+            Integrate AI search into your application with just a few lines of
+            code.
+          </p>
+        </div>
+        <div className={styles.grid}>
+          <pre>
+            <code>{`curl -X POST https://productbase-api.vercel.app/api/v1/search \\\n  -H "Authorization: Bearer YOUR_API_KEY" \\\n  -H "Content-Type: application/json" \\\n  -d '{"query":"wireless headphones"}'`}</code>
+          </pre>
+          <div>
+            {items.map(([Icon, title, text]) => (
+              <div className={styles.item} key={title}>
+                <Icon size={20} />
+                <div>
+                  <h4>{title}</h4>
+                  <p>{text}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

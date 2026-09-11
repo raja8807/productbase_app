@@ -9,12 +9,14 @@ import Developer from "./sections/Developer/Developer";
 import CTA from "./sections/CTA/CTA";
 import Footer from "./sections/Footer/Footer";
 import styles from "./LandingPage.module.scss";
+import ProductVideo from "./sections/ProductVideo/ProductVideo";
 export default function LandingPage() {
   return (
     <div className={styles.landingPage}>
       <Navbar />
       <main>
         <Hero />
+        <ProductVideo/>
         <Features />
         <HowItWorks />
         <SearchDemo />
